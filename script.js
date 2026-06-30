@@ -1,13 +1,14 @@
 const images = [
-    "pic1.JPG",
-    "pic2.jpg",
-    "pic3.jpg",
-    "pic4.jpg",
-    "pic5.jpg",
-    "pic6.jpg",
-    "pic7.jpg",
-    "pic8.jpg",
-    "pic9.jpg"
+    "images/pic1.jpg",
+    "images/pic2.jpg",
+    "images/pic3.jpg",
+    "images/pic4.jpg",
+    "images/pic5.jpg",
+    "images/pic6.jpg",
+    "images/pic7.jpg",
+    "images/pic8.jpg",
+    "images/pic9.jpg"
+
 ];
 
 let currentIndex = 0;
@@ -35,11 +36,10 @@ function changeImage(step) {
 
     document.getElementById("lightbox-img").src = images[currentIndex];
 }
-
 function filterImages(category) {
-    const galleryImages = document.querySelectorAll(".gallery img");
+    const images = document.querySelectorAll(".gallery img");
 
-    galleryImages.forEach(img => {
+    images.forEach(img => {
         if (category === "all") {
             img.style.display = "block";
         } else if (img.classList.contains(category)) {
